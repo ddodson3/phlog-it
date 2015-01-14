@@ -1,0 +1,41 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >    
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin"
+	    android:orientation="vertical"
+	    android:gravity="center_horizontal"
+	    tools:context="edu.miami.c08159659.phlogit.AddEntry" >
+	
+		<ImageView android:id="@+id/entry_thumb"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="@dimen/image_bottom_margin" />
+	    <ImageButton android:id="@+id/take_photo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/ic_action_camera"
+	        android:onClick="takePicture"/>
+	    <EditText android:id="@+id/entry_title"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:scrollHorizontally="true"
+	        android:maxLength="@integer/entry_title_max_length"
+	        android:hint="@string/title_hint"/>
+	    <EditText android:id="@+id/entry_text"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/text_hint"
+	        android:lines="@integer/entry_text_height"
+	        android:maxLines="@integer/entry_text_height"
+	        android:maxLength="@integer/entry_text_max_length"
+	        android:gravity="top" />
+	</LinearLayout>
+</ScrollView>
